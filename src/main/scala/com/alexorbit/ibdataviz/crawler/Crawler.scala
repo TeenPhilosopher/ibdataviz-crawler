@@ -40,7 +40,6 @@ object Crawler extends App {
 
   lazy val redirectCodes = {
     import java.net.HttpURLConnection._
-    val redirectCodes = Set(HTTP_MOVED_TEMP, HTTP_MOVED_PERM, HTTP_SEE_OTHER)
     Set(HTTP_MOVED_TEMP, HTTP_MOVED_PERM, HTTP_SEE_OTHER)
   }
 

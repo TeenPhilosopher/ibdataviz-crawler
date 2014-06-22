@@ -1,0 +1,759 @@
+Newly HIV infected (%, age 15-49).csv
+Newly HIV infected (number, all ages).csv
+People living with HIV (number, all ages).csv
+Adults with HIV (%, age 15-49).csv
+
+Age at 1st marriage (women).csv
+
+Aged 55+ unemployment rate (%).csv
+Males aged 55+, unemployment rate (%).csv
+Males aged 25-54, unemployment rate (%).csv
+Males aged 15+, unemployment rate (%).csv
+Males aged 15+ employment rate (%).csv
+Males aged 15-24, unemployment rate (%).csv
+Males aged 15-24 employment rate (%).csv
+Male long term unemployment rate (%).csv
+Long term unemployment rate (%).csv
+GDP_employee (US$, inflation-adjusted).csv
+Females aged 55+, unemployment rate (%).csv
+Females aged 25-54, unemployment rate (%).csv
+Females aged 15+, unemployment rate (%).csv
+Females aged 15+ employment rate (%).csv
+Females aged 15-24, unemployment rate (%).csv
+Females aged 15-24 employment rate (%).csv
+Female long term unemployment rate (%).csv
+Female self-employed (% of female labour force).csv
+Male self-employed (% of male labour force).csv
+Self-employed (% of labour force).csv
+Aged 25-54 unemployment rate (%).csv
+Aged 15+ unemployment rate (%).csv
+Aged 15+ employment rate (%).csv
+Aged 15-24 unemployment rate (%).csv
+Aged 15-24 employment rate (%).csv
+
+Aged 65+ labour force participation rate (%).csv
+Service workers (% of labour force).csv
+Salaried workers (% of labour force).csv
+Male service workers (% of male labour force).csv
+Male salaried workers (% of male labour force).csv
+Males aged 65+ labour force participation rate (%).csv
+Males aged 25-54 labour force participation rate (%).csv
+Males aged 15+ labour force participation rate (%).csv
+Males aged 15-64 labour force participation rate (%).csv
+Male industry workers (% of male labour force).csv
+Male family workers (% of male labour force).csv
+Male agriculture workers (% of male labour force).csv
+Industry workers (% of labour force).csv
+Female service workers (% of female labour force).csv
+Female salaried workers (% of female labour force).csv
+Females aged 65+ labour force participation rate (%).csv
+Females aged 25-54 labour force participation rate (%).csv
+Females aged 15+ labour force participation rate (%).csv
+Females aged 15-64 labour force participation rate (%).csv
+Female industry workers (% of female labour force).csv
+Female family workers (% of female labour force).csv
+Female agriculture workers (% of female labour force).csv
+Family workers (% of labour force).csv
+Agriculture workers (% of labour force).csv
+Aged 25-54 labour force participation rate (%).csv
+Aged 15+ labour force participation rate (%).csv
+Aged 15-64 labour force participation rate (%).csv
+
+Agricultural land (% of land area).csv
+
+Agricultural water withdrawal (% of total).csv
+Municipal water withdrawal (cu meters per person).csv
+Municipal water withdrawal (% of total).csv
+Renewable water (cu meters per person).csv
+Water withdrawal (cu meters per person).csv
+Total water withdrawal (billion cu meters).csv
+
+Agriculture (% of GDP).csv
+
+
+Government and society aid given (% of aid).csv
+Health aid given (% of aid).csv
+Multisector cross-cutting aid given (% of aid).csv
+Other social services aid given (% of aid).csv
+Population policies aid given (% of aid).csv
+Production sector aid given (% of aid).csv
+Water and sanitation aid given (% of aid).csv
+Economical infrastructure aid given (% of aid).csv
+Education aid given (% of aid).csv
+
+Aid given (2007 US$).csv
+Aid given per person (2007 US$).csv
+Aid given (% of GNI).csv
+Aid received (% of GNI).csv
+Aid received per person (current US$).csv
+Aid received, total (US$, inflation-adjusted).csv
+
+Alcohol consumption per adult 15+ (litres).csv
+
+All forms of TB, detection rate (%).csv
+All forms of TB, detection rate (%) - DOTS only.csv
+All forms of TB, existing cases per 100,000 - estimated.csv
+All forms of TB, new cases per 100,000 - estimated.csv
+All forms of TB, new cases per 100,000 - reported.csv
+All forms of TB, number of existing cases - estimated.csv
+All forms of TB, number of new cases - estimated.csv
+All forms of TB, number of new cases - reported.csv
+
+Alternative GDP_capita (PPP$, inflation-adjusted) from PWT.csv
+Alternative GDP per capita PPP, PWT 7.1.csv
+Alternative GDP per capita PPP, WB.csv
+
+Alternative poverty (% below nationally defined poverty line).csv
+Urban poverty (% urban people below national urban poverty line).csv
+Rural poverty (% rural people below national rural poverty line).csv
+Poverty (% people below $2 a day).csv
+Extreme poverty (% people below $1.25 a day) version 20120905.csv
+Extreme poverty (% people below $1.25 a day).csv
+
+Armed forces personnel (% of labor force).csv
+Armed forces personnel, total.csv
+
+
+ART coverage % (CD4 < 350).csv
+
+Dollar billionaires per million people.csv
+Total number of dollar billionaires.csv
+Average age of dollar billionaires (years).csv
+
+Bad teeth per child (12 yr).csv
+
+
+Biomass stock in forest (tons).csv
+
+
+Births attended by skilled health staff (% of total).csv
+
+Blood pressure (SBP), men, mmHg.csv
+Blood pressure (SBP), women, mmHg.csv
+
+Body Mass Index (BMI), men, Kg_m2.csv
+Body Mass Index (BMI), women, Kg_m2.csv
+
+Breast cancer, new cases per 100,000 women.csv
+Breast cancer, number of new female cases.csv
+
+Broadband subscribers (per 100 people).csv
+Broadband subscribers (total).csv
+
+Drownings (per 100,000 people).csv
+Car deaths (per 100,000 people).csv
+Tsunami - deaths annual number.csv
+Traffic (total deaths).csv
+Traffic deaths women (per 100,000 people).csv
+Traffic deaths (per 100,000 people).csv
+Traffic deaths men (per 100,000 people).csv
+Tetanus deaths in newborn (total deaths).csv
+Tetanus deaths in newborn (per 1,000 births).csv
+TB with HIV+, number of deaths - estimated.csv
+TB with HIV+, deaths per 100,000 - estimated.csv
+Suicide (total deaths).csv
+Storm - deaths annual number.csv
+Stomach cancer, number of male deaths.csv
+Stomach cancer, number of female deaths.csv
+Stomach cancer, deaths per 100,000 women.csv
+Stomach cancer, deaths per 100,000 men.csv
+Sepsis deaths in newborn (total deaths).csv
+Sepsis deaths in newborn (per 1,000 births).csv
+Prostate cancer, number of male deaths.csv
+Prostate cancer, deaths per 100,000 men.csv
+Prematurity deaths in newborn (total deaths).csv
+Prematurity deaths in newborn (per 1,000 births).csv
+Poisonings, deaths (per 100,000 people).csv
+Pneumonia deaths in newborn (total deaths).csv
+Pneumonia deaths in newborn (per 1,000 births).csv
+Pneumonia deaths in children 1-59 months (total deaths).csv
+Pneumonia deaths in children 1-59 months (per 1,000 births).csv
+Plane crash - deaths annual number.csv
+Pertussis deaths in children 1-59 months (total deaths).csv
+Pertussis deaths in children 1-59 months (per 1,000 births).csv
+Other infections deaths in children 1-59 months (total deaths).csv
+Other infections deaths in children 1-59 months (per 1,000 births).csv
+Other deaths in newborn (total deaths).csv
+Other deaths in newborn (per 1,000 births).csv
+Number of child deaths.csv
+NCD deaths in children 1-59 months (total deaths).csv
+NCD deaths in children 1-59 months (per 1,000 births).csv
+Murder (total deaths).csv
+Motorcycle deaths (per 100,000 people).csv
+Meningitis deaths in children 1-59 months (total deaths).csv
+Meningitis deaths in children 1-59 months (per 1,000 births).csv
+Measles deaths in children 1-59 months (total deaths).csv
+Measles deaths in children 1-59 months (per 1,000 births).csv
+Maternal deaths, total number.csv
+Maternal deaths, lifetime risk (per 1,000).csv
+Malaria number of deaths - reported.csv
+Malaria deaths per 100,000 - reported.csv
+Malaria deaths in children 1-59 months (total deaths).csv
+Malaria deaths in children 1-59 months (per 1,000 births).csv
+Lung cancer, number of male deaths.csv
+Lung cancer, number of female deaths.csv
+Lung cancer, deaths per 100,000 women.csv
+Lung cancer, deaths per 100,000 men.csv
+Liver cancer, number of male deaths.csv
+Liver cancer, number of female deaths.csv
+Liver cancer, deaths per 100,000 women.csv
+Liver cancer, deaths per 100,000 men.csv
+Injury deaths in children 1-59 months (total deaths).csv
+Injury deaths in children 1-59 months (per 1,000 births).csv
+Flood - deaths annual number.csv
+Falls, deaths (per 100,000 people).csv
+Extreme temperature - deaths annual number.csv
+Epidemic - deaths annual number.csv
+Earthquake - deaths annual number.csv
+Drought - deaths annual number.csv
+Diarrhoeal deaths in newborn (total deaths).csv
+Diarrhoeal deaths in newborn (per 1,000 births).csv
+Diarrhoeal deaths in children 1-59 months (total deaths).csv
+Diarrhoeal deaths in children 1-59 months (per 1,000 births).csv
+Crude death rate (deaths per 1,000 population).csv
+Congenital deaths in newborn (total deaths).csv
+Congenital deaths in newborn (per 1,000 births).csv
+Colon&Rectum cancer, number of male deaths.csv
+Colon&Rectum cancer, number of female deaths.csv
+Colon&Rectum cancer, deaths per 100,000 women.csv
+Colon&Rectum cancer, deaths per 100,000 men.csv
+Cervical cancer, number of female deaths.csv
+Cervical cancer, deaths per 100,000 women.csv
+Burns deaths (per 100,000 people).csv
+Breast cancer, number of female deaths.csv
+Breast cancer, deaths per 100,000 women.csv
+Birth asphyxia deaths in newborn (total deaths).csv
+Birth asphyxia deaths in newborn (per 1,000 births).csv
+Battle deaths (per 100 000).csv
+All forms of TB, number of deaths - estimated.csv
+All forms of TB, deaths per 100,000 - estimated.csv
+All causes deaths in newborn (total deaths).csv
+All causes deaths in newborn (per 1,000 births).csv
+All causes deaths in children 1-59 months (total deaths).csv
+All causes deaths in children 1-59 months (per 1,000 births).csv
+Annual HIV deaths (number, all ages).csv
+HIV deaths in children 1-59 months (total deaths).csv
+HIV deaths in children 1-59 months (per 1,000 births).csv
+Under-five mortality from IHME (per 1,000 born).csv
+Under-five mortality from CME (per 1,000 born).csv
+Traffic mortality children 0-14 (per 100,000 people).csv
+Traffic mortality 60+ (per 100,000 people).csv
+Traffic mortality 45-59 (per 100,000 people).csv
+Traffic mortality 30-44 (per 100,000 people).csv
+Traffic mortality 15-29 (per 100,000 people).csv
+Maternal mortality ratio WHO.csv
+Maternal mortality ratio (per 100,000 live births).csv
+Infant mortality (rate per 1,000 births).csv
+Estimate or projection of under-five mortality rate, from IHME.csv
+Data method - Maternal mortality.csv
+Child mortality (0-5 year-olds dying per 1,000 born).csv
+
+Flood - affected annual number.csv
+Tsunami - affected annual number.csv
+Storm - affected annual number.csv
+Plane crash - affected annual number.csv
+
+Cars, trucks & buses per 1,000 persons.csv
+
+Central bank discount rate (annual %).csv
+
+Cervical cancer, new cases per 100,000 women.csv
+Cervical cancer, number of new female cases.csv
+
+
+Children and elderly (per 100 adults).csv
+
+Children out of school, primary.csv
+Children out of school, primary, female.csv
+Children out of school, primary, male.csv
+
+Dead kids per woman.csv
+Children per woman, temporary update.csv
+Children per woman (total fertility).csv
+Teen fertility rate (births per 1,000 women ages 15-19).csv
+Teen fertility rate (births per 1,000 women ages 15-19).csv
+Children per woman (total fertility), with projections.csv
+
+Cholesterol (fat) in blood, men, mmol_L.csv
+Cholesterol (fat) in blood, women, mmol_L.csv
+
+Cumulative CO2 emissions (tonnes).csv
+Yearly CO2 emissions (1000 tonnes).csv
+Total sulfur emission (kilotonnes).csv
+Sulfur emissions per person (kg).csv
+CO2 emissions (tonnes per person).csv
+CO2 intensity of economic output (kg CO2 per 2005 PPP $ of GDP).csv
+
+Coal consumption, per person.csv
+Coal consumption, total.csv
+
+Colon&Rectum cancer, new cases per 100,000 men.csv
+Colon&Rectum cancer, new cases per 100,000 women.csv
+Colon&Rectum cancer, number of new female cases.csv
+Colon&Rectum cancer, number of new male cases.csv
+
+
+Contraceptive use (% of women ages 15-49).csv
+
+Corruption Perception Index (CPI).csv
+Inequality index (Gini).csv
+
+Crude birth rate (births per 1,000 population).csv
+
+
+Data quality - Children per woman.csv
+Data quality - Life expectancy.csv
+Data quality - Population.csv
+
+Debt to foreigners by public & private (% of GNI).csv
+Total reserves (% of debt to foreigners).csv
+Present value of debt (% of GNI).csv
+External debt, total (US$, not inflation-adjusted).csv
+
+Democracy score (use as color).csv
+
+
+
+Drought - affected annual number.csv
+
+DTP3 immunized (% of one-year-olds).csv
+PAB immunized (% of newborns).csv
+MCV immunized (% of one-year-olds).csv
+HepB3 immunized (% of one-year-olds).csv
+Hib3 immunized (% of one-year-olds).csv
+
+Earthquake - affected annual number.csv
+
+Economic growth over the past 10 years.csv
+
+Hydroelectric electricity production, per person.csv
+Residential electricity use, per person.csv
+Residential electricity use, total.csv
+Hydroelectric electricity production, total.csv
+Electricity generation, per person.csv
+Electricity generation, total.csv
+Electricity use, per person.csv
+Electricity use, total.csv
+Energy from solid biofuels (%).csv
+Energy production, per person.csv
+Energy production, total.csv
+Energy supply per person TOE.csv
+Energy use, per person.csv
+Energy use, total.csv
+
+Epidemic - affected annual number.csv
+
+Expenditure per student, primary (% of GDP per person).csv
+Expenditure per student, secondary (% of GDP per person).csv
+Expenditure per student, tertiary (% of GDP per person).csv
+
+
+Extreme temperature - affected annual number.csv
+
+Female population, with projections.csv
+Patent applications (total).csv
+Patents granted (total).csv
+Patents in force (total).csv
+Personal computers (per 100 people).csv
+Personal computers (total).csv
+Plane crash - affected annual number.csv
+Planted forest area (ha).csv
+Population aged 0-4 years, both sexes (%).csv
+Population aged 0-4 years, female (%).csv
+Population aged 0-4 years, male (%).csv
+Population aged 0-4 years (total number).csv
+Population aged 10-14 years, both sexes (%).csv
+Population aged 10-14 years, female (%).csv
+Population aged 10-14 years, male (%).csv
+Population aged 10-14 years (total number).csv
+Population aged 15-19 years, both sexes (%).csv
+Population aged 15-19 years, female (%).csv
+Population aged 15-19 years, male (%).csv
+Population aged 15-19 years (total number).csv
+Population aged 20-39 years, both sexes (%).csv
+Population aged 20-39 years, female (%).csv
+Population aged 20-39 years, male (%).csv
+Population aged 20-39 years (total number).csv
+Population aged 40-59 years, both sexes (%).csv
+Population aged 40-59 years, female (%).csv
+Population aged 40-59 years, male (%).csv
+Population aged 40-59 years (total number).csv
+Population aged 5-9 years, both sexes (%).csv
+Population aged 5-9 years, female (%).csv
+Population aged 5-9 years, male (%).csv
+Population aged 5-9 years (total number).csv
+Population aged 60+ years, both sexes (%).csv
+Population aged 60+ years, female (%).csv
+Population aged 60+ years, male (%).csv
+Population aged 60+ years (total number).csv
+Population density (per square km).csv
+Population growth (annual %).csv
+Population growth (annual %), with projections.csv
+Population in urban agglomerations > 1 million (% of total population).csv
+Population, total.csv
+Primary completion rate, total (% of relevant age group).csv
+Primary forest area (ha).csv
+Primary school completion (% of boys).csv
+Primary school completion (% of girls).csv
+Privately owned forest land (%).csv
+Privately owned other wooded land (%).csv
+Private share of total health spending (%).csv
+Prostate cancer, new cases per 100,000 men.csv
+Prostate cancer, number of new male cases.csv
+Pump price for gasoline (US$ per liter).csv
+Ratio of girls to boys in primary and secondary education (%).csv
+Ratio of young literate females to males (% ages 15-24).csv
+Renewable water (cu meters per person).csv
+Residential electricity use, per person.csv
+Residential electricity use, total.csv
+Roads, paved (% of total roads).csv
+Services (% of GDP).csv
+Sex ratio (0-14 years).csv
+Sex ratio (15-24 years).csv
+Sex ratio (15-49 years).csv
+Sex ratio (above 50 years).csv
+Sex ratio (all age groups).csv
+Smoking adults (% of population over age 15).csv
+Smoking men (% of men over age 15).csv
+Smoking women (% of women over age 15).csv
+Stillbirths (per 1,000 births).csv
+Stomach cancer, new cases per 100,000 men.csv
+Stomach cancer, new cases per 100,000 women.csv
+Stomach cancer, number of new female cases.csv
+Stomach cancer, number of new male cases.csv
+Storm - affected annual number.csv
+Sugar per person (g per day).csv
+Suicide age 0-14 (per 100,000 people).csv
+Suicide age 15-29 (per 100,000 people).csv
+Suicide age 30-44 (per 100,000 people).csv
+Suicide age 45-59 (per 100,000 people).csv
+Suicide age 60+ (per 100,000 people).csv
+Suicide men (per 100,000 people).csv
+Suicide (per 100,000 people).csv
+Suicide women (per 100,000 people).csv
+Sulfur emissions per person (kg).csv
+Surface area (sq. km).csv
+Surviving kids per woman.csv
+Tax revenue (% of GDP).csv
+TB programme (DOTS) population coverage (%).csv
+
+TB with HIV+, existing cases per 100,000 - estimated.csv
+TB with HIV+, new cases per 100,000 - estimated.csv
+TB with HIV+, number of existing cases - estimated.csv
+TB with HIV+, number of new cases - estimated.csv
+
+Total GDP (PPP$, inflation-adjusted).csv
+Total GDP (US$, inflation-adjusted).csv
+Total GNI (PPP, current international $).csv
+Total health spending (% of GDP).csv
+Total health spending per person (international $).csv
+Total health spending per person (US$).csv
+Total population, with projections.csv
+Total sulfur emission (kilotonnes).csv
+Total water withdrawal (billion cu meters).csv
+Trade balance (% of GDP).csv
+Trade balance (US$, not inflation-adjusted).csv
+Tsunami - affected annual number.csv
+Underweight children.csv
+Urban population.csv
+Urban population growth (annual %).csv
+Urban population (% of total).csv
+Water withdrawal (cu meters per person).csv
+Wood removal (cubic meters).csv
+Working hours per week.csv
+Year categorization 1820-2010.csv
+Year categorization 1950-.csv
+Yearly CO2 emissions (1000 tonnes).csv
+Male population, with projections.csv
+
+Fixed line and mobile phone subscribers (per 100 people).csv
+Cell phones (total).csv
+Cell phones (per 100 people).csv
+
+Food supply (kilocalories _ person & day).csv
+
+Foreign direct investment, net inflows (% of GDP).csv
+Foreign direct investment, net outflows (% of GDP).csv
+Investments (% of GDP).csv
+
+Forest area (sq. km).csv
+Forest coverage (%).csv
+Forest land, total area (ha).csv
+Forest products removal, per ha ($).csv
+Forest products removal, total ($).csv
+
+GDP_capita growth over next 10 years.csv
+GDP_capita growth (% per year).csv
+GDP_capita (US$, inflation-adjusted).csv
+GDP_working hour (US$, inflation-adjusted).csv
+
+GNI_capita (Atlas method, current US$).csv
+GNI_capita (constant 2000 US$).csv
+GNI_per capita (PPP, current international $).csv
+
+Government health spending of total gov. spending (%).csv
+Government health spending per person (international $).csv
+Government health spending per person (US$).csv
+Government share of total health spending (%).csv
+
+HDI (Human Development Index).c% of manufactured exportssv
+
+High-technology exports (% of manufactured exports).csv
+Imports unit value (index, 2000=100).csv
+Imports (% of GDP).csv
+Exports unit value (index, 2000=100).csv
+Exports (% of GDP).csv
+Arms imports (US$, inflation adjusted).csv
+Arms exports (US$, inflation-adjusted).csv
+
+Hourly compensation (US$).csv
+
+How far to the north.csv
+
+IFPRI Underweight children.csv
+
+Improved sanitation, overall access (%).csv
+Improved sanitation, rural access (%).csv
+Improved sanitation, urban access (%).csv
+Improved water source, overall access (%).csv
+Improved water source, rural access (%).csv
+Improved water source, urban access (%).csv
+
+Income share of richest 20%.csv
+Subsistence incomes per person.csv
+Old version of Income per person (version 8).csv
+Old version of Income per person (version 3).csv
+Income share of richest 10%.csv% of manufactured exports
+Income share of poorest 20%.csv
+Income share of poorest 10%.csv
+Income share of middle 20%.csv
+Income share of 2nd richest 20%.csv
+Income share of 2nd poorest 20%.csv
+Income per person, with projections.csv
+Income per person (GDP_capita, PPP$ inflation-adjusted).csv
+Debt servicing costs (% of exports and net income from abroad).csv
+Data quality - Income per person.csv
+
+Industrial water withdrawal (% of total).csv
+Desalinated water produced (billion cu meters).csv
+
+Industry (% of GDP).csv
+
+Infectious TB, detection rate (%).csv
+Infectious TB, det% of manufactured exportsection rate (%) - DOTS only.csv
+Infectious TB, new cases per 100,000 - estimated.csv
+Infectious TB, new cases per 100,000 - reported.csv
+Infectious TB, number of new cases - estimated.csv
+Infectious TB, number of new cases - reported.csv
+Infectious TB, treatment (DOTS) completed (%).csv
+
+Inflation (annual %).csv
+
+Internal renewable water (cu meters per person).csv
+
+Internet users (per 100 people).csv
+Internet users (total).csv
+
+Life expectancy at birth, temporary update.csv
+Life expectancy at birth, with projections.csv
+Life expectancy (years).csv
+
+Literacy rate, adult female (% of females ages 15 and above).csv
+Literacy rate, adult male (% of males ages 15 and above).csv
+Literacy rate, adult total (% of people ages 15 and above).csv
+Literacy rate, youth female (% of females ages 15-24).csv
+Literacy rate, youth male (% of males ages 15-24).csv
+Literacy rate, youth total (% of people ages 15-24).csv
+Primary school completion (% of boys).csv
+Primary completion rate, total (% of relevant age group).csv
+Primary school completion (% of girls).csv
+Ratio of girls to boys in primary and secondary education (%).csv
+Ratio of young literate females to males (% ages 15-24).csv
+
+Liver cancer, new cases per 100,000 men.csv
+Liver cancer, new cases per 100,000 women.csv
+Liver cancer, number of new female cases.csv
+Liver cancer, number of new male cases.csv
+
+Lung cancer, new cases per 100,000 men.csv
+Lung cancer, new cases per 100,000 women.csv
+Lung cancer, number of new female cases.csv
+Lung cancer, number of new male cases.csv
+
+Malaria cases per 100,000 - reported.csv
+Malaria number of cases - reported.csv
+
+
+Malnutrition, weight for age (% of children under 5).csv
+
+Market value of listed companies (% of GDP).csv
+
+Math achievement - 4th grade.csv
+Math achievement - 8th grade.csv
+
+Mean years in school (men 25 to 34 years).csv
+Mean years in school (men 25 years and older).csv
+Mean years in school (women 25 to 34 years).csv
+Mean years in school (women 25 years and older).csv
+Mean years in school (women % men, 25 to 34 years).csv
+Mean years in school (women of reproductive age 15 to 44).csv
+
+Median age (years).csv
+
+Medical Doctors (per 1,000 people).csv
+
+Merchandise trade (% of GDP).csv
+
+Military expenditure (% of GDP).csv
+
+Murdered 15-29 (per 100,000 people).csv
+Murdered 30-44, (per 100,000 people).csv
+Murdered 45-59 (per 100,000 people).csv
+Murdered 60+ (per 100,000 people).csv
+Murdered children 0-14 (per 100,000 people).csv
+Murdered men (per 100,000 people).csv
+Murdered women (per 100,000 people).csv
+Murder (per 100,000 people).csv
+
+Natural gas production, per person.csv
+Natural gas production, total.csv
+Natural gas proved reserves, total.csv
+Natural gas proven reserves, per person.csv
+
+Net barter terms of trade (2000 = 100).csv
+
+New births (total number, estimated).csv
+
+Nuclear electricity production, per person.csv
+Nuclear electricity production, total.csv
+
+Oil consumption, per person.csv
+Oil consumption, total.csv
+Oil production, per person.csv
+Oil production, total.csv
+Oil proved reserves, total.csv
+Oil proven reserves, per person.csv
+
+Out-of-pocket share of total health spending (%).csv
+
+Patent applications (total).csv
+Patents granted (total).csv
+Patents in force (total).csv
+
+Personal computers (per 100 people).csv
+Personal computers (total).csv
+
+Planted forest area (ha).csv
+
+Population aged 0-4 years, both sexes (%).csv
+Population aged 0-4 years, female (%).csv
+Population aged 0-4 years, male (%).csv
+Population aged 0-4 years (total number).csv
+Population aged 10-14 years, both sexes (%).csv
+Population aged 10-14 years, female (%).csv
+Population aged 10-14 years, male (%).csv
+Population aged 10-14 years (total number).csv
+Population aged 15-19 years, both sexes (%).csv
+Population aged 15-19 years, female (%).csv
+Population aged 15-19 years, male (%).csv
+Population aged 15-19 years (total number).csv
+Population aged 20-39 years, both sexes (%).csv
+Population aged 20-39 years, female (%).csv
+Population aged 20-39 years, male (%).csv
+Population aged 20-39 years (total number).csv
+Population aged 40-59 years, both sexes (%).csv
+Population aged 40-59 years, female (%).csv
+Population aged 40-59 years, male (%).csv
+Population aged 40-59 years (total number).csv
+Population aged 5-9 years, both sexes (%).csv
+Population aged 5-9 years, female (%).csv
+Population aged 5-9 years, male (%).csv
+Population aged 5-9 years (total number).csv
+Population aged 60+ years, both sexes (%).csv
+Population aged 60+ years, female (%).csv
+Population aged 60+ years, male (%).csv
+Population aged 60+ years (total number).csv
+Population density (per square km).csv
+Population growth (annual %).csv
+Population growth (annual %), with projections.csv
+Population in urban agglomerations > 1 million (% of total population).csv
+Population, total.csv
+
+Primary forest area (ha).csv
+
+
+Privately owned forest land (%).csv
+Privately owned other wooded land (%).csv
+
+Private share of total health spending (%).csv
+
+Prostate cancer, new cases per 100,000 men.csv
+Prostate cancer, number of new male cases.csv
+
+Pump price for gasoline (US$ per liter).csv
+
+Roads, paved (% of total roads).csv
+
+Services (% of GDP).csv
+
+Sex ratio (0-14 years).csv
+Sex ratio (15-24 years).csv
+Sex ratio (15-49 years).csv
+Sex ratio (above 50 years).csv
+Sex ratio (all age groups).csv
+
+Smoking adults (% of population over age 15).csv
+Smoking men (% of men over age 15).csv
+Smoking women (% of women over age 15).csv
+
+Stillbirths (per 1,000 births).csv
+
+Stomach cancer, new cases per 100,000 men.csv
+Stomach cancer, new cases per 100,000 women.csv
+Stomach cancer, number of new female cases.csv
+Stomach cancer, number of new male cases.csv
+
+Sugar per person (g per day).csv
+
+Suicide age 0-14 (per 100,000 people).csv
+Suicide age 15-29 (per 100,000 people).csv
+Suicide age 30-44 (per 100,000 people).csv
+Suicide age 45-59 (per 100,000 people).csv
+Suicide age 60+ (per 100,000 people).csv
+Suicide men (per 100,000 people).csv
+Suicide (per 100,000 people).csv
+Suicide women (per 100,000 people).csv
+
+Surface area (sq. km).csv
+Surviving kids per woman.csv
+Tax revenue (% of GDP).csv
+TB programme (DOTS) population coverage (%).csv
+
+TB with HIV+, existing cases per 100,000 - estimated.csv
+TB with HIV+, new cases per 100,000 - estimated.csv
+TB with HIV+, number of existing cases - estimated.csv
+TB with HIV+, number of new cases - estimated.csv
+
+
+Total GDP (PPP$, inflation-adjusted).csv
+Total GDP (US$, inflation-adjusted).csv
+Total GNI (PPP, current international $).csv
+
+Total health spending (% of GDP).csv
+Total health spending per person (international $).csv
+Total health spending per person (US$).csv
+
+Total population, with projections.csv
+Urban population.csv
+Urban population growth (annual %).csv
+Urban population (% of total).csv
+
+Trade balance (% of GDP).csv
+Trade balance (US$, not inflation-adjusted).csv
+
+Underweight children.csv
+
+Working hours per week.csv
+
+Year categorization 1820-2010.csv
+Year categorization 1950-.csv

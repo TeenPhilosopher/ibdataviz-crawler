@@ -17,7 +17,7 @@ object Crawler extends App {
   val showHowMany = selectContainer findElement By.xpath("select")
   new Select(showHowMany) selectByVisibleText "All"
   val urls = (driver findElements By.xpath("//tr/td[5]/a[1]")) map (i => i.getAttribute("href") replace("=xls", "=csv"))
-  val filenames = (driver findElements By.xpath("//tr/td[1]/a[1]")) map (i => s"data/${i.getText.replace("/", "_")}.csv")
+  val filenames = (driver findElements By.xpath("//tr/td[1]/a[1]")) map (i => s"data/raw/${i.getText.replace("/", "_")}.csv")
   assert(urls.length == filenames.length)
 
   driver close

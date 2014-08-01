@@ -9,6 +9,7 @@ import com.typesafe.scalalogging.slf4j.Logger
 import org.slf4j.LoggerFactory
 
 import scala.collection.JavaConversions._
+import scala.util.Try
 
 object CubeSQLBuilder extends App with Logging {
   val logger = Logger(LoggerFactory.getLogger(getClass.getName))
@@ -24,33 +25,24 @@ object CubeSQLBuilder extends App with Logging {
   val outputDirectory = new File(outputDirectoryName)
   outputDirectory.mkdirs()
 
-  inputFiles foreach { inputFile =>
-    logger.info(s"Processing file ${inputFile.getName}")
-    val baseName = fileBaseName(inputFile, ".csv")
-    val outputFile = new File(outputDirectory, s"$baseName.sql")
-    val out = new PrintWriter(new FileWriter(outputFile), true)
+  val inputFileData = inputFiles map { inputFile =>
+    Try {
+      logger.info(s"Processing file ${inputFile.getName}")
+      val reader = new CSVReader(new FileReader(inputFile))
+      val records = reader.readAll.toSeq map (_.toSeq)
 
-    val reader = new CSVReader(new FileReader(inputFile))
-    val records = reader.readAll.toSeq map (_.toSeq)
+      val headerRecord = records.head
+      val dataRecords = records.tail
 
-    val headerRecord = records.head
-    val dataRecords = records.tail
+      val measurementName = {
+        val name = headerRecord.head.trim
+        if (name.isEmpty) fileBaseName(inputFile, ".csv")
+        else name
+      }
 
-    val measurementName = headerRecord.head
-
-    val createTable = s"""
-         |CREATE TABLE "$baseName" (
-         |  country TEXT NOT NULL,
-         |  year INTEGER NOT NULL,
-         |  "$measurementName" NUMERIC NOT NULL
-         |);
-       """.stripMargin
-    out.println(createTable)
-
-    try {
       val years = headerRecord.tail map (_.toInt)
 
-      val cubeData = {
+      val cubePairs =
         for {
           record <- dataRecords
           country = record.head
@@ -62,12 +54,39 @@ object CubeSQLBuilder extends App with Logging {
           } yield (years(i), numberFormat.parse(measurementValue))
           yearMap = yearValues.toMap
         } yield country -> yearMap
-      }.toMap
-    } catch {
-      case e: Exception => logger.error(s"Error processing $inputFile: $e")
+
+      (inputFile, measurementName, cubePairs.toMap)
     }
   }
 
+  inputFileData.
+    filter(_.isSuccess).
+    map(_.get).
+    foreach { case (inputFile, measurementName, cubeData) =>
+      val baseName = fileBaseName(inputFile, ".csv")
+      val outputFile = new File(outputDirectory, s"$baseName.sql")
+      val out = new PrintWriter(new FileWriter(outputFile), true)
+
+      out.println(s"""DROP TABLE IF EXISTS "${baseName}";""")
+
+      val createTable = s"""
+           |CREATE TABLE "$baseName" (
+           |  country TEXT NOT NULL,
+           |  year INTEGER NOT NULL,
+           |  "$measurementName" NUMERIC NOT NULL
+           |);
+         """.stripMargin
+      out.println(createTable)
+
+      cubeData foreach { case (country, yearData) =>
+      }
+
+      val createIndexes = s"""
+           |CREATE UNIQUE INDEX "${baseName}_country"(country, year);
+           |CREATE INDEX "${baseName}_year"(year);
+         """.stripMargin
+      out.println(createIndexes)
+  }
 
   def fileBaseName(file: File, suffix: String) = {
     val position = file.getName.lastIndexOf(suffix)

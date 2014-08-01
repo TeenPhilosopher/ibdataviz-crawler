@@ -79,6 +79,13 @@ object CubeSQLBuilder extends App with Logging {
       out.println(createTable)
 
       cubeData foreach { case (country, yearData) =>
+          yearData foreach { case (year, measurement) =>
+            val insert = s"""
+               |INSERT INTO "$baseName"(country, year, "$measurementName")
+               |VALUES('$country', $year, $measurement);
+             """.stripMargin
+            out.println(insert)
+          }
       }
 
       val createIndexes = s"""

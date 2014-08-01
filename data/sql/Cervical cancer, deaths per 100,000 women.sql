@@ -1,0 +1,7 @@
+
+CREATE TABLE "Cervical cancer, deaths per 100,000 women" (
+  country TEXT NOT NULL,
+  year INTEGER NOT NULL,
+  "Cervix Female Mortality" NUMERIC NOT NULL
+);
+       

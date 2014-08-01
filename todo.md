@@ -7,3 +7,4 @@
 - Group infant, newborn, and child mortality totals and causes as a cube
 - Create a cube for natural disasters?
 - Consider using the same raw file for multiple cubes (ex: Epidemic - deaths annual number can be used for epidemic cube and cause of death cube.
+- Update crawler so as to retrieve data sources for associated data files and therefore comply with the terms of service of each individual organization.

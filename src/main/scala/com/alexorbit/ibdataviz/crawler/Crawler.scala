@@ -17,8 +17,11 @@ object Crawler extends App {
   val showHowMany = selectContainer findElement By.xpath("select")
   new Select(showHowMany) selectByVisibleText "All"
   val urls = (driver findElements By.xpath("//tr/td[5]/a[1]")) map (i => i.getAttribute("href") replace("=xls", "=csv"))
-  val filenames = (driver findElements By.xpath("//tr/td[1]/a[1]")) map (i => s"data/raw/${i.getText.replace("/", "_")}.csv")
+  val filenames = (driver findElements By.xpath("//tr/td[1]/a[1]")) map (i => s"daata/sourcesta/raw/${i.getText.replace("/", "_")}.csv")
   assert(urls.length == filenames.length)
+  val dataSources = (driver findElements By.xpath("//tr/td[2]/a[1]")) map (i => s"${i.getText.replace("Various sources", "Gapminder").replace("Based on", "Gapminder - Based on").replace("XXX???", "Gapminder - based on GMID and WHO")}")
+  val namesAndSources = (filenames zip dataSources).toList
+  println(namesAndSources)
 
   driver close
 

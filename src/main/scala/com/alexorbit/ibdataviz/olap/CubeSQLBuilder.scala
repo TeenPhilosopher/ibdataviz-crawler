@@ -82,18 +82,39 @@ object CubeSQLBuilder extends App with Logging {
           yearData foreach { case (year, measurement) =>
             val insert = s"""
                |INSERT INTO "$baseName"(country, year, "$measurementName")
-               |VALUES('$country', $year, $measurement);
+               |VALUES('${escape(country)}', $year, $measurement);
              """.stripMargin
             out.println(insert)
           }
       }
 
       val createIndexes = s"""
-           |CREATE UNIQUE INDEX "${baseName}_country"(country, year);
-           |CREATE INDEX "${baseName}_year"(year);
+           |CREATE UNIQUE INDEX "${baseName}_country" ON "${baseName}"(country, year);
+           |CREATE INDEX "${baseName}_year" ON "${baseName}"(year);
          """.stripMargin
       out.println(createIndexes)
+
+      out.close()
   }
+
+  val allSqlFile = new File(outputDirectory, "all.sql")
+  val allSql = new PrintWriter(new FileWriter(allSqlFile), true)
+  //allSql.println("\\o all.log")
+  inputFiles foreach { inputFile =>
+    val scriptFileName = s"${fileBaseName(inputFile, ".csv")}.sql"
+    allSql.println(s"\\i '$scriptFileName'")
+  }
+  allSql.close()
+
+  // val runtime = Runtime.getRuntime
+  // val database = "ibdataviz"
+  // val commandLine = s"""psql -h localhost -U $database -f "$allSqlFile" -e -a -L all.log $database """
+  // logger.info(s"Executing Postgres command: $commandLine")
+  // val process = runtime.exec(commandLine)
+  // val exitCode = process.waitFor()
+  // logger.info(s"Process completed with exit code $exitCode")
+
+  def escape(string: String) = string.replace("'", "''")
 
   def fileBaseName(file: File, suffix: String) = {
     val position = file.getName.lastIndexOf(suffix)

@@ -14,3 +14,9 @@ This data is collected to populate a relational database with purposes of data
 visualization and analysis.
 
 This is part of my 2014 IB Personal Project for Suncoast High School.
+
+# Roadmap #
+
+- 1.0: As many cubes as GapMinder files: the only dimensions are Geography (country) and Time (year)
+- 1.1: Coalesce GapMinder files to provide additional dimensions (e.g. age range)
+ 

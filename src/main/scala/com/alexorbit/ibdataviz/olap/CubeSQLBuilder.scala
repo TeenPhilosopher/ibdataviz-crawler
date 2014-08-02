@@ -20,7 +20,9 @@ object CubeSQLBuilder extends App with Logging {
   val numberFormat = new DecimalFormat("###,###,###.##")
 
   val inputDirectory = new File(inputDirectoryName)
-  val inputFiles = inputDirectory.listFiles().toSeq filter (_.getName.endsWith(".csv"))
+  val inputFiles = inputDirectory.listFiles().toSeq.
+    filter (_.getName.endsWith(".csv")).
+    take(16)
 
   val outputDirectory = new File(outputDirectoryName)
   outputDirectory.mkdirs()
@@ -78,15 +80,16 @@ object CubeSQLBuilder extends App with Logging {
          """.stripMargin
       out.println(createTable)
 
+      val dataFile = new File(outputDirectory, s"$baseName.dat")
+      val dataOut = new PrintWriter(new FileWriter(dataFile), true)
       cubeData foreach { case (country, yearData) =>
           yearData foreach { case (year, measurement) =>
-            val insert = s"""
-               |INSERT INTO "$baseName"(country, year, "$measurementName")
-               |VALUES('${escape(country)}', $year, $measurement);
-             """.stripMargin
-            out.println(insert)
+            dataOut.println(s"$country\t$year\t$measurement")
           }
       }
+      dataOut.close()
+
+      out.println(s"""\\copy "${baseName}" from '${dataFile.getName}'""")
 
       val createIndexes = s"""
            |CREATE UNIQUE INDEX "${baseName}_country" ON "${baseName}"(country, year);

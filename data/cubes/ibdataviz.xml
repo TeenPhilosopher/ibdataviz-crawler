@@ -1,0 +1,32 @@
+<Schema name="ibdataviz">
+    <Dimension name="Geography">
+        <Hierarchy hasAll="true" primaryKey="country">
+            <Table name="d_geography"/>
+            <Level name="Country" column="country" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+    <Dimension name="Time">
+        <Hierarchy hasAll="true" primaryKey="year">
+            <Table name="d_time"/>
+            <Level name="Century" column="century" uniqueMembers="true"/>
+            <Level name="Decade" column="decade" uniqueMembers="false"/>
+            <Level name="Year" column="year" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+    <Dimension name="Gender">
+        <Hierarchy hasAll="true" primaryKey="gender">
+            <Table name="d_gender"/>
+            <Level name="Gender" column="gender" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Cube name="Children out of school">
+        <Table name="c_children_out_of_school"/>
+
+        <DimensionUsage name="Location" source="Geography" foreignKey="country"/>
+        <DimensionUsage name="Time" source="Time" foreignKey="year"/>
+        <DimensionUsage name="Gender" source="Gender" foreignKey="gender"/>
+
+        <Measure name="Count" column="count" aggregator="sum" formatString="###,###,###"/>
+    </Cube>
+</Schema>

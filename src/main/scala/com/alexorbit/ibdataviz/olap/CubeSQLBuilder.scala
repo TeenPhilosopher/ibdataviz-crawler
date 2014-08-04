@@ -20,9 +20,11 @@ object CubeSQLBuilder extends App with Logging {
   val numberFormat = new DecimalFormat("###,###,###.##")
 
   val inputDirectory = new File(inputDirectoryName)
-  val inputFiles = inputDirectory.listFiles().toSeq.
-    filter (_.getName.endsWith(".csv")).
-    take(16)
+  val inputFiles = inputDirectory.listFiles().
+    toSeq.
+    sorted.
+    filter (_.getName.endsWith(".csv"))/*.
+    take(16)*/
 
   val outputDirectory = new File(outputDirectoryName)
   outputDirectory.mkdirs()

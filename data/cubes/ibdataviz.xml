@@ -27,6 +27,6 @@
         <DimensionUsage name="Time" source="Time" foreignKey="year"/>
         <DimensionUsage name="Gender" source="Gender" foreignKey="gender"/>
 
-        <Measure name="Count" column="count" aggregator="sum" formatString="###,###,###"/>
+        <Measure name="Count" column="count" aggregator="avg" formatString="###,###,###"/>
     </Cube>
 </Schema>

@@ -4,8 +4,8 @@ import java.io.{FileReader, File}
 import java.text.DecimalFormat
 
 import au.com.bytecode.opencsv.CSVReader
-import com.typesafe.scalalogging.StrictLogging
 import com.typesafe.scalalogging.Logger
+import com.typesafe.scalalogging.StrictLogging
 import org.slf4j.LoggerFactory
 
 import scala.util.Try

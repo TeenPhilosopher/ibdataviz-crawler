@@ -13,6 +13,9 @@ the last two centuries on aspects such as population, health, income, etc.
 This data is collected to populate a relational database with purposes of data
 visualization and analysis.
 
+I use the [Saiku](http://www.meteorite.bi/) OLAP server to enable analytics on
+cubes created from Gapminder data.
+
 This is part of my 2014 IB Personal Project for Suncoast High School.
 
 # Roadmap #

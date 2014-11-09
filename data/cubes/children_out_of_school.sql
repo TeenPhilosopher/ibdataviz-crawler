@@ -1,4 +1,4 @@
-﻿drop table if exists c_children_out_of_school;
+drop table if exists c_children_out_of_school;
 drop table if exists d_geography;
 drop table if exists d_time;
 drop table if exists d_gender;

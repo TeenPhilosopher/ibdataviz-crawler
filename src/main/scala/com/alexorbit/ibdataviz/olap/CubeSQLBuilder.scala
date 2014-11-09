@@ -4,15 +4,15 @@ import java.io._
 import java.text.DecimalFormat
 
 import au.com.bytecode.opencsv._
-import com.typesafe.scalalogging.Logging
-import com.typesafe.scalalogging.slf4j.Logger
+import com.typesafe.scalalogging.Logger
+import com.typesafe.scalalogging.StrictLogging
 import org.slf4j.LoggerFactory
 
 import scala.collection.JavaConversions._
 import scala.util.Try
 
-object CubeSQLBuilder extends App with Logging {
-  val logger = Logger(LoggerFactory.getLogger(getClass.getName))
+object CubeSQLBuilder extends App with StrictLogging {
+  override val logger = Logger(LoggerFactory.getLogger(getClass.getName))
 
   val inputDirectoryName = "data/raw"
   val outputDirectoryName = "data/sql"

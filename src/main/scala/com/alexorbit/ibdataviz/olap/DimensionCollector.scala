@@ -4,15 +4,15 @@ import java.io.{FileReader, File}
 import java.text.DecimalFormat
 
 import au.com.bytecode.opencsv.CSVReader
-import com.typesafe.scalalogging.Logging
-import com.typesafe.scalalogging.slf4j.Logger
+import com.typesafe.scalalogging.StrictLogging
+import com.typesafe.scalalogging.Logger
 import org.slf4j.LoggerFactory
 
 import scala.util.Try
 import collection.JavaConversions._
 
-object DimensionCollector extends App with Logging {
-  val logger = Logger(LoggerFactory.getLogger(getClass.getName))
+object DimensionCollector extends App with StrictLogging {
+  override val logger = Logger(LoggerFactory.getLogger(getClass.getName))
 
   val inputDirectoryName = "data/raw"
   val outputDirectoryName = "data"

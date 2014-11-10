@@ -1,7 +1,10 @@
+\cd ../sql
+\i 'Children out of school, primary, male.sql'
+\i 'Children out of school, primary, female.sql'
+
+\cd ../cubes
+
 drop table if exists c_children_out_of_school;
-drop table if exists d_geography;
-drop table if exists d_time;
-drop table if exists d_gender;
 
 create table c_children_out_of_school as 
 select country, year::text, 'male' as gender, "Children out of school, primary, male" as count
@@ -14,15 +17,20 @@ alter table c_children_out_of_school add primary key (country, year, gender);
 create index ccoos_year on c_children_out_of_school (year);
 create index ccoos_gender on c_children_out_of_school (gender);
 
-create table d_geography as select distinct country from c_children_out_of_school;
-alter table d_geography add primary key (country);
+insert into d_geography(country)
+select country from c_children_out_of_school
+except
+select country from d_geography;
 
-create table d_time as 
-select year::text,
-       ((year / 100) + 1)::text as century,
-       (mod(year, 100) / 10)::text as decade
-from (select distinct year::integer from c_children_out_of_school) as y;
-alter table d_time add primary key (year);
+insert into d_time(year, decade, century) 
+select year,
+       (mod(year::integer, 100) / 10)::text as decade,
+       ((year::integer / 100) + 1)::text as century
+from c_children_out_of_school
+except
+select year, decade, century from d_time;
 
-create table d_gender as select distinct gender from c_children_out_of_school;
-alter table d_gender add primary key (gender);
+insert into d_gender(gender)
+select gender from c_children_out_of_school
+except
+select gender from d_gender;

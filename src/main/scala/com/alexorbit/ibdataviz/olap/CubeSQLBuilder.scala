@@ -32,24 +32,33 @@ object CubeSQLBuilder extends App with StrictLogging {
   val inputFileData = inputFiles map { inputFile =>
     Try {
       logger.info(s"Processing file ${inputFile.getName}")
+      
+      val baseName = normalize(fileBaseName(inputFile, ".csv"))
+        
       val reader = new CSVReader(new FileReader(inputFile))
       val records = reader.readAll.toSeq map (_.toSeq)
 
       val headerRecord = records.head
+      // Tsunami killed,1979,1980,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007
+      
       val dataRecords = records.tail
+      // Bangladesh,,,,,,,,,,,,2,,,
+      // France,11,,,,,,,,,,,,,,
+      // Indonesia,539,0,,,,,,,,,0,165708,0,802,
 
-      val measurementName = {
-        val name = headerRecord.head.trim
-        if (name.isEmpty) fileBaseName(inputFile, ".csv")
+      val measurementName = normalize {
+        val name = headerRecord.head.trim // Tsunami killed
+        if (name.isEmpty) baseName // Tsunami - deaths annual number
         else name
       }
 
       val years = headerRecord.tail map (_.toInt)
+      // 1979,1980,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007
 
       val cubePairs =
         for {
           record <- dataRecords
-          country = record.head
+          country = record.head.trim
           measurementValues = record.tail
           yearValues = for {
             i <- 0 until years.length
@@ -59,15 +68,17 @@ object CubeSQLBuilder extends App with StrictLogging {
           yearMap = yearValues.toMap
         } yield country -> yearMap
 
-      (inputFile, measurementName, cubePairs.toMap)
+      (baseName, measurementName, cubePairs.toMap)
     }
   }
+  
+  val errors = inputFileData.filter(_.isFailure)
+  logger.error(s"There were ${errors.length} errors")
+  
+  val inputFileTriplets = inputFileData.filter(_.isSuccess).map(_.get)
 
-  inputFileData.
-    filter(_.isSuccess).
-    map(_.get).
-    foreach { case (inputFile, measurementName, cubeData) =>
-      val baseName = fileBaseName(inputFile, ".csv")
+  inputFileTriplets foreach { case (baseName, measurementName, cubeData) =>
+      val inputFileName = s"$baseName.csv"
       val outputFile = new File(outputDirectory, s"$baseName.sql")
       val out = new PrintWriter(new FileWriter(outputFile), true)
 
@@ -76,7 +87,7 @@ object CubeSQLBuilder extends App with StrictLogging {
       val createTable = s"""
            |CREATE TABLE "$baseName" (
            |  country TEXT NOT NULL,
-           |  year INTEGER NOT NULL,
+           |  year TEXT NOT NULL,
            |  "$measurementName" NUMERIC NOT NULL
            |);
          """.stripMargin
@@ -98,6 +109,24 @@ object CubeSQLBuilder extends App with StrictLogging {
            |CREATE INDEX "${baseName}_year" ON "${baseName}"(year);
          """.stripMargin
       out.println(createIndexes)
+      
+      val insertDimensions = s"""
+          |INSERT INTO d_geography(country)
+          |SELECT country
+          |FROM "$baseName"
+          |EXCEPT
+          |SELECT country
+          |FROM d_geography;
+          |
+          |INSERT INTO d_time(year, decade, century)
+          |SELECT year,
+          |       (mod(year::INTEGER, 100) / 10)::TEXT AS decade,
+          |       ((year::INTEGER / 100) + 1)::TEXT AS century
+          |FROM "$baseName"
+          |EXCEPT
+          |SELECT year, decade, century FROM d_time;
+      """.stripMargin
+      out.println(insertDimensions)
 
       out.close()
   }
@@ -105,8 +134,8 @@ object CubeSQLBuilder extends App with StrictLogging {
   val allSqlFile = new File(outputDirectory, "all.sql")
   val allSql = new PrintWriter(new FileWriter(allSqlFile), true)
   //allSql.println("\\o all.log")
-  inputFiles foreach { inputFile =>
-    val scriptFileName = s"${fileBaseName(inputFile, ".csv")}.sql"
+  inputFileTriplets foreach { case (baseName, _, _) =>
+    val scriptFileName = s"$baseName.sql"
     allSql.println(s"\\i '$scriptFileName'")
   }
   allSql.close()
@@ -118,8 +147,53 @@ object CubeSQLBuilder extends App with StrictLogging {
   // val process = runtime.exec(commandLine)
   // val exitCode = process.waitFor()
   // logger.info(s"Process completed with exit code $exitCode")
+  
+  // Generate Mondrian XML configuration
+  val cubeDefs = inputFileTriplets map { case (cubeName, measurementName, _) =>
+    s"""
+     |<Cube name="${escapeXml(cubeName)}">
+     |  <Table name="${escapeXml(cubeName)}"/>
+     |  <DimensionUsage name="Location" source="Geography" foreignKey="country"/>
+     |  <DimensionUsage name="Time" source="Time" foreignKey="year"/>
+     |  <Measure name="${escapeXml(measurementName)}" column="${escapeXml(measurementName)}" aggregator="sum" formatString="###,###,###"/>
+     |</Cube>
+    """.stripMargin
+  }
+  
+  val schemaXml = s"""
+    |<Schema name="ibdataviz">
+    |   <Dimension name="Geography">
+    |     <Hierarchy hasAll="true" primaryKey="country">
+    |      <Table name="d_geography"/>
+    |      <Level name="Country" column="country" uniqueMembers="true"/>
+    |  </Hierarchy>
+    |</Dimension>
+    |<Dimension name="Time">
+    |  <Hierarchy hasAll="true" primaryKey="year">
+    |      <Table name="d_time"/>
+    |      <Level name="Century" column="century" uniqueMembers="true"/>
+    |      <Level name="Decade" column="decade" uniqueMembers="false"/>
+    |       <Level name="Year" column="year" uniqueMembers="true"/>
+    |   </Hierarchy>
+    |</Dimension>
+    |${cubeDefs.mkString("\n")}
+    |</Schema>
+  """.stripMargin
+  
+  val schemaOut = new PrintWriter(new FileWriter("data/cubes/saiku-schemas/gapminder.xml"), true)
+  schemaOut.println(schemaXml)
+  schemaOut.close()
 
-  def escape(string: String) = string.replace("'", "''")
+  def normalize(string: String) = string.
+    replace("'", "''").
+    trim.
+    replaceAll("\"", "").
+    replaceAll("\\.", ",")
+
+  def escapeXml(string: String) = string.
+    replaceAll("\\&", "\\&amp;").
+    replaceAll("<", "\\&lt;").
+    replaceAll(">", "\\&gt;")
 
   def fileBaseName(file: File, suffix: String) = {
     val position = file.getName.lastIndexOf(suffix)

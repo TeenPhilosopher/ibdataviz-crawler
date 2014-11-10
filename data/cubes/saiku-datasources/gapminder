@@ -1,0 +1,6 @@
+type=OLAP
+name=gapminder
+driver=mondrian.olap4j.MondrianOlap4jDriver
+location=jdbc:mondrian:Jdbc=jdbc:postgresql://localhost:5432/ibdataviz;Catalog=res:saiku-schemas/gapminder.xml;JdbcDrivers=org.postgresql.Driver
+username=ibdataviz
+password=ibdataviz

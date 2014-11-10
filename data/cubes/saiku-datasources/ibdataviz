@@ -1,0 +1,6 @@
+type=OLAP
+name=ibdataviz
+driver=mondrian.olap4j.MondrianOlap4jDriver
+location=jdbc:mondrian:Jdbc=jdbc:postgresql://localhost:5432/ibdataviz;Catalog=res:saiku-schemas/ibdataviz.xml;JdbcDrivers=org.postgresql.Driver
+username=ibdataviz
+password=ibdataviz

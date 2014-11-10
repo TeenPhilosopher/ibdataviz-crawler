@@ -156,7 +156,7 @@ object CubeSQLBuilder extends App with StrictLogging {
      |  <Table name="${escapeXml(cubeName)}"/>
      |  <DimensionUsage name="Location" source="Geography" foreignKey="country"/>
      |  <DimensionUsage name="Time" source="Time" foreignKey="year"/>
-     |  <Measure name="${escapeXml(measurementName)}" column="${escapeXml(measurementName)}" aggregator="sum" formatString="###,###,###"/>
+     |  <Measure name="${escapeXml(measurementName)}" column="${escapeXml(measurementName)}" aggregator="avg" formatString="###,###,###"/>
      |</Cube>
     """.stripMargin
   }

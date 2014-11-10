@@ -34,6 +34,7 @@ object CubeSQLBuilder extends App with StrictLogging {
       logger.info(s"Processing file ${inputFile.getName}")
       
       val baseName = normalize(fileBaseName(inputFile, ".csv"))
+      // Tsunami - deaths annual number
         
       val reader = new CSVReader(new FileReader(inputFile))
       val records = reader.readAll.toSeq map (_.toSeq)
